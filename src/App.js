@@ -13,7 +13,7 @@ import Proceed from './Proceed';
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8000/men')
+    fetch('https://sneakers-iadx.onrender.com/men')
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);
