@@ -20,7 +20,7 @@ const ProductChekout = () => {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-          fetch('http://localhost:8000/men')
+          fetch('https://sneakers-api-ycw6.onrender.com/men')
             .then((res) => res.json())
             .then((data) => {
               let newArr = data.data.slice(1, 6);
