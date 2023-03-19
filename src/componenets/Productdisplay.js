@@ -54,7 +54,7 @@ const Productdisplay = ({data}) => {
                      
                        <img src={product.thumbnail}></img>
                        <div className='card__info'>
-                         <p>{product.band}</p>
+                         <p>{product.brand}</p>
                          <h3>{product.silhoutte}</h3>
                          <h4>${product.retailPrice}</h4>
                        </div>
