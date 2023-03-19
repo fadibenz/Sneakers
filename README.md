@@ -1,4 +1,4 @@
-# Sneakers: E-Commerce Webapp
+# Sneakers: E-Commerce Web App
 
 This is a React application that I built while learning React for an e-commerce website of a sneakers company.
 
@@ -22,3 +22,8 @@ This application is a full-fledged e-commerce website with the following feature
 # Design
 
 The design of the website is inspired by a Frontend mentor challenge and various e-commerce websites and is customized to match the branding of the sneakers company. The color scheme and typography are carefully chosen to create a modern and premium look and feel. The website is fully responsive and optimized for different screen sizes.
+
+
+# Deployment
+
+the app is deployed on Render, you can check it out from here: [https://sneakers-iadx.onrender.com]
