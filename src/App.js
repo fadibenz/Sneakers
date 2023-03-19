@@ -28,6 +28,7 @@ function App() {
         <Route path='Home' element={<Home />} />
         <Route path='/*' element={<Home />} />
           
+          
 
         <Route path='Men' element={<Men data={data} />} />
         <Route path='Women' element={<Women data={data} />} />
@@ -35,7 +36,8 @@ function App() {
         <Route path='Chekout/:productId' element={<ProductChekout />} />
 
         <Route path='Cart' element={<Cart />} />
-        <Route path='Proceed' element={<Proceed />} 
+        <Route path='Proceed' element={<Proceed />} />
+        {/* <Route path='*' element={<></>} /> Must add a 404 page */}
         
       </Routes>
     </ScrollToTop>
