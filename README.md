@@ -2,7 +2,7 @@
 
 This is a React application that I built while learning React for an e-commerce website of a sneakers company.
 
-#Features
+# Features
 
 This application is a full-fledged e-commerce website with the following features:
 
@@ -13,12 +13,12 @@ This application is a full-fledged e-commerce website with the following feature
 - Shopping cart with the ability to add/remove items and update quantities.
 - Checkout process (form validation and payment integration not included).
 
-#Technology Stack
+# Technology Stack
 
 - React.js.
 - React Router and React icons.
 - Vanilla CSS.
 
-#Design
+# Design
 
 The design of the website is inspired by a Frontend mentor challenge and various e-commerce websites and is customized to match the branding of the sneakers company. The color scheme and typography are carefully chosen to create a modern and premium look and feel. The website is fully responsive and optimized for different screen sizes.
