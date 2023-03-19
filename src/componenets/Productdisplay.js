@@ -46,17 +46,17 @@ const Productdisplay = ({data}) => {
                    <a
                      className='Product--link product--card'
                      onClick={() => {
-                       navigate(`/Chekout/${product.goatProductId}`, {
+                       navigate(`/Chekout/${product.id}`, {
                          state: product,
                        });
                      }}
                    >
                      
-                       <img src={product.thumbnail}></img>
+                       {/* <img src={product.thumbnail}></img> */}
                        <div className='card__info'>
-                         <p>{product.band}</p>
+                         <p>{product.brand}</p>
                          <h3>{product.silhoutte}</h3>
-                         <h4>${product.retailPrice}</h4>
+                         <h4>${product.Price}</h4>
                        </div>
                    </a>
                  );})
