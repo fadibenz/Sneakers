@@ -217,7 +217,9 @@ main {
   font-size: 1.4rem !important;
 }
 
-
+.Product--Display{
+  margin: auto;
+}
 .back-btn {
   background-color: transparent;
   font-size: 2rem;
@@ -627,11 +629,11 @@ thead td {
 }
 
 .Check-Btn {
-  width: 12%;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 12%;
+  height: 40px;
   border: transparent;
   border-radius: 50%;
   font-size: 1.7rem;
@@ -726,6 +728,10 @@ thead td {
   margin-top: 2em;
 }
 
+.Primarynav .Single-Btn{
+  color: black;
+}
+
 .Navmenu--block {
   width: 60%;
   max-width: 275px;
@@ -755,9 +761,6 @@ thead td {
 }
 
 @media screen and (max-width: 900px) {
-  .Main-Page {
-    width: 90vw;
-  }
   html {
     font-size: 14px;
   }
@@ -783,8 +786,7 @@ thead td {
     font-size: 16px;
   }
 
-  .Main-Page {
-    width: 90vw;
+  .Main-Page{
     flex-direction: column;
     align-items: center;
   }
@@ -826,6 +828,11 @@ thead td {
   }
   .Checkout-Box .Big-Img {
     width: 55%;
+
+  }
+  .Big-Img img  {
+    height: 200px;
+    object-fit: cover;
   }
   .Checkout-Box .Thumbnails {
     width: 50%;
@@ -839,16 +846,12 @@ thead td {
 }
 
 @media (max-width: 451px) {
-  main {
-    width: 100vw;
-  }
+ 
   nav {
-    width: 90vw;
     margin: 0 auto;
   }
 
   .Main-Page {
-    width: 100vw;
     margin-top: 0;
     z-index: -1;
   }
@@ -886,10 +889,7 @@ thead td {
   .Big-Img img {
     border-radius: 0px;
   }
-  .Check-Btn {
-    display: flex;
-  }
-  .Checkout-Box .Big-Img {
+   .Checkout-Box .Big-Img {
     width: 80%;
   }
   .Checkout-Box .Big-Img img {
@@ -1088,7 +1088,7 @@ input {
 }
 
 .filter--container {
-  position: relative;
+  /* position: relative; */
   font-size: 1rem;
   margin-top: 4em;
   padding: 1em 0.7em;
@@ -1098,7 +1098,7 @@ input {
 .placeholder {
   position: absolute;
   left: 0;
-  top: 80%;
+  top: 23px;
   opacity: 0.7;
   transition: var(--transition);
 }
@@ -1106,7 +1106,7 @@ input {
 .search--icon {
   position: absolute;
   left: 160px;
-  top: 90%;
+  top: 30px;
   opacity: 0.7;
 }
 
@@ -1121,7 +1121,7 @@ input:focus + .search--icon {
 }
 
 input:focus ~ .placeholder {
-  top: 17px;
+  top: 4px;
   font-size: 0.9rem;
   opacity: 1;
 }
@@ -1225,10 +1225,12 @@ input:focus ~ .placeholder {
   width: 100%;
   border-radius: var(--radius);
   margin-bottom: 1em;
+  height: 120px;
+  object-fit: cover;
 }
 
 .product--card h3 {
-  margin: 1em 0 0;
+  margin: .4em 0 0;
   font-size: 1.1rem !important;
   line-height: 1.45;
 }
@@ -1272,21 +1274,23 @@ input:focus ~ .placeholder {
   background-color: #f2f2f2;
   transition: var(--transition);
 }
-
-@media (max-width: 362px) {
-  .product--card {
+@media (max-width: 450px) {
+  input {
+    width: 250px;
+    margin: auto;
+  }
+  .search--icon {
+    left: 285px;
+  }
+  .placeholder{
+    left: 50px;
+  }
+   .product--card {
     width: 80%;
     margin: 1em auto;
   }
-  .placeholder {
-    left: 40px;
-  }
-  input {
-    margin: 0 auto;
-    width: 250px;
-  }
-  .search--icon {
-    left: 275px;
+  .product--card img {
+    height: 200px;
   }
   .filter {
     margin-bottom: 5em;
@@ -1297,15 +1301,21 @@ input:focus ~ .placeholder {
     right: unset;
   }
 }
-
-@media (min-width: 450px) {
+@media (max-width: 362px) {
+  .placeholder {
+    left: 40px;
+  }
   input {
+    margin: 0 auto;
     width: 250px;
   }
   .search--icon {
-    left: 235px;
+    left: 275px;
   }
+
+
 }
+
 
 @media (min-width: 600px) {
   .product--card {
@@ -1427,8 +1437,6 @@ input:focus ~ .placeholder {
   transition: var(--transition-2);
   cursor: pointer;
   margin-bottom: 2em;
-  position: relative;
-  z-index: 10;
 }
 
 .Hero--btn:hover {
@@ -2037,6 +2045,9 @@ input:focus ~ .placeholder {
   }
 }
 
+.Primarynav .Single-Btn{
+  color: black;
+}
 
 /* Proceed to Checkout */
 

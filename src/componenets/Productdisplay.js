@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdSearch } from 'react-icons/md';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+import shoes from '../data/data'
 
-const Productdisplay = ({data}) => {
+const Productdisplay = () => {
     const [filter, setFilter] = useState(false);
-    const navigate = useNavigate()
-    
+    const navigate = useNavigate();
+    console.log(shoes);    
     return (
       <div>
         <section className='filter'>
@@ -41,7 +42,7 @@ const Productdisplay = ({data}) => {
         </section>
         <article className='card--container'>
             { 
-              data.map((product)=> {
+              shoes.map((product)=> {
                  return (
                    <a
                      className='Product--link product--card'
@@ -51,12 +52,11 @@ const Productdisplay = ({data}) => {
                        });
                      }}
                    >
-                     
-                       {/* <img src={product.thumbnail}></img> */}
+                       <img src={product.photoUrl}></img>
                        <div className='card__info'>
                          <p>{product.brand}</p>
-                         <h3>{product.silhoutte}</h3>
-                         <h4>${product.Price}</h4>
+                         <h3>{product.name}</h3>
+                         <h4>${product.price}</h4>
                        </div>
                    </a>
                  );})

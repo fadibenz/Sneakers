@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Productdisplay from './componenets/Productdisplay';
-const Men = ({data}) => {
+const Men = () => {
   return (
     <div>
       <main>
@@ -17,7 +17,7 @@ const Men = ({data}) => {
             </p>
           </article>
         </section >
-        <Productdisplay data={data}/>
+        <Productdisplay />
       </main>
       <Footer />
     </div>

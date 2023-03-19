@@ -6,27 +6,17 @@ import {MdChevronLeft} from 'react-icons/md';
 import Showimages from './Showimages';
 import Footer from './Footer';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import shoes from './data/data'
 const ProductChekout = () => {
   const [count, setCount] = useState(0);
   const [newCart, setNewCart] = useState(false);
-
   const location = useLocation()
-
   const navigate = useNavigate()
   const [product, setProduct] = useState(location.state)
-  let thumbnail = [product.thumbnail];
-  const element = product.thumbnail;
+  let thumbnail = [product.photoUrl];
+  const element = product.photoUrl;
+  let data = shoes.slice(1, 6);
 
-  const [data, setData] = useState([]);
-  useEffect(() => {
-          fetch('https://sneakers-api-ycw6.onrender.com/men')
-            .then((res) => res.json())
-            .then((data) => {
-              let newArr = data.data.slice(1, 6);
-              setData(newArr);
-            });
-        }, []);
 
   
   let n = 3;
@@ -41,27 +31,21 @@ const ProductChekout = () => {
         newCart={newCart}
         count={count}
         />
-        <section className='Main'>
-          <div className='Goback'>
-            <button className='back-btn' onClick={() => navigate(-1)}>
-              <MdChevronLeft />
-            </button>
-            <h4>Men</h4>
-          </div>
+        <section  className='Product--Display'>
           <section className='Main-Page'>
             <div className='Mobile-version'>
               <h5 className='company-name'>{product.brand}</h5>
-              <h1 className='main-title'>{product.silhoutte}</h1>
+              <h1 className='main-title'>{product.name}</h1>
             </div>
             <Showimages
               swipe={false}
-              photos={product.thumbnail}
+              photos={product.photoUrl}
               thumbnails={thumbnail}
             />
             <article className='Info-Cnt'>
               <div className='Desktop-vers'>
                 <h5 className='company-name'>{product.brand}</h5>
-                <h1 className='main-title'>{product.silhoutte}</h1>
+                <h1 className='main-title'>{product.name}</h1>
               </div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
@@ -72,7 +56,7 @@ const ProductChekout = () => {
               </p>
               <div className='Price'>
                 <div>
-                  <h3>${product.retailPrice}.00</h3>
+                  <h3>${product.price}.00</h3>
                   <h4 className='Price--discount'>50%</h4>
                 </div>
                 <span>$250.00</span>
@@ -117,11 +101,11 @@ const ProductChekout = () => {
                       }}
                       className='Product--link product--card'
                     >
-                      <img src={product.thumbnail}></img>
+                      <img src={product.photoUrl}></img>
                       <div className='card__info'>
-                        <p>{product.band}</p>
-                        <h3>{product.silhoutte}</h3>
-                        <h4>${product.retailPrice}</h4>
+                        <p>{product.brand}</p>
+                        <h3>{product.name}</h3>
+                        <h4>${product.price}</h4>
                       </div>
                     </a>
                   );
