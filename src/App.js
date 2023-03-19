@@ -34,7 +34,7 @@ function App() {
         <Route path='Chekout/:productId' element={<ProductChekout />} />
 
         <Route path='Cart' element={<Cart />} />
-        <Route path='Proceed' element={<Proceed />} 
+        <Route path='Proceed' element={<Proceed />} />
         
       </Routes>
     </ScrollToTop>
